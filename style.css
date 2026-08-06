@@ -1,1 +1,397 @@
+/* ==========================
+   Wooden Sofa Cushion
+   style.css - Part 1
+========================== */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f8f8f8;
+color:#333;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* Header */
+
+header{
+background:#4e342e;
+color:#fff;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo h1{
+font-size:28px;
+}
+
+.logo p{
+font-size:14px;
+color:#ddd;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ffd54f;
+}
+
+/* Hero */
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("sofa1.jpg") center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+}
+
+.overlay{
+width:100%;
+padding:20px;
+}
+
+.hero-content h2{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+max-width:800px;
+margin:auto;
+font-size:20px;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+background:#8d6e63;
+color:#fff;
+padding:14px 32px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+display:inline-block;
+}
+
+.btn:hover{
+background:#5d4037;
+transform:translateY(-3px);
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.whatsapp:hover{
+background:#128C7E;
+  }
+/* ==========================
+   Sections
+========================== */
+
+section{
+padding:80px 0;
+}
+
+section h2{
+text-align:center;
+font-size:36px;
+margin-bottom:15px;
+color:#4e342e;
+}
+
+.subtitle{
+text-align:center;
+margin-bottom:40px;
+color:#666;
+font-size:18px;
+}
+
+/* Services */
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.service-card{
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.service-card h3{
+color:#5d4037;
+margin-bottom:15px;
+font-size:22px;
+}
+
+.service-card p{
+color:#555;
+}
+
+/* Gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 6px 20px rgba(0,0,0,.12);
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* About */
+
+#about{
+background:#fff8f2;
+}
+
+#about p{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:18px;
+line-height:1.8;
+color:#555;
+}
+
+/* Why Choose Us */
+
+.why{
+background:#f4f4f4;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.why-box{
+background:#fff;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.why-box h3{
+margin-bottom:12px;
+color:#5d4037;
+}
+
+.why-box p{
+color:#555;
+}
+/* ==========================
+   Reviews
+========================== */
+
+#reviews{
+background:#fff;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.review-card{
+background:#fafafa;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+text-align:center;
+transition:.3s;
+}
+
+.review-card:hover{
+transform:translateY(-8px);
+}
+
+.review-card h4{
+margin-top:15px;
+color:#5d4037;
+}
+
+/* ==========================
+   Contact
+========================== */
+
+#contact{
+background:#f7f7f7;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:40px;
+align-items:center;
+}
+
+.contact-grid h3{
+margin-top:15px;
+color:#5d4037;
+}
+
+.contact-grid p{
+margin:10px 0;
+}
+
+.contact-grid a{
+color:#5d4037;
+text-decoration:none;
+font-weight:600;
+}
+
+.contact-grid iframe{
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0
+                               box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer{
+    background:#5d4037;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* WhatsApp Button */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    z-index:999;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* Responsive */
+@media (max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+        gap:12px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 20px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .service-card{
+        margin-bottom:20px;
+    }
+  }
