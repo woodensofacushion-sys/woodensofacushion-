@@ -1,24 +1,29 @@
 /* =========================================================
-   WOODEN SOFA CUSHION - LUXURY WEBSITE STYLE
+   WOODEN SOFA CUSHION
+   Luxury Sofa & Furniture Website
    Poonamallee, Chennai
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
 
 :root {
-  --black: #090a0c;
-  --dark: #111318;
-  --dark2: #17191e;
-  --card: #1b1e24;
+  --black: #08090b;
+  --dark: #101216;
+  --dark2: #15181d;
+  --card: #191c22;
   --white: #ffffff;
-  --text: #e9ebef;
+  --text: #eeeeee;
   --muted: #aeb4bd;
-  --gold: #d6ad63;
-  --gold-light: #f0ce8a;
+  --gold: #d5aa5b;
+  --gold-light: #f2cf86;
   --green: #19b85b;
-  --border: rgba(255,255,255,0.10);
-  --shadow: 0 20px 60px rgba(0,0,0,0.35);
+  --border: rgba(255,255,255,0.11);
+  --shadow: 0 18px 55px rgba(0,0,0,0.35);
 }
+
+/* =========================================================
+   RESET
+   ========================================================= */
 
 * {
   margin: 0;
@@ -57,29 +62,29 @@ a {
    HEADER
    ========================================================= */
 
+header,
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(9,10,12,0.92);
+  background: rgba(8,9,11,0.94);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
 }
 
 .header-inner {
-  min-height: 82px;
+  min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 25px;
 }
 
 .logo h1 {
   font-family: "Playfair Display", serif;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 1.1;
-  color: var(--white);
-  letter-spacing: -0.5px;
+  color: white;
 }
 
 .logo h1::first-letter {
@@ -88,22 +93,21 @@ a {
 
 .logo span {
   display: block;
-  margin-top: 5px;
+  margin-top: 4px;
   color: var(--muted);
-  font-size: 13px;
-  letter-spacing: 0.3px;
+  font-size: 12px;
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 25px;
 }
 
 nav a {
-  color: #e8e9ec;
-  font-weight: 600;
+  color: #eeeeee;
   font-size: 15px;
+  font-weight: 600;
   transition: 0.25s ease;
 }
 
@@ -117,7 +121,7 @@ nav a:hover {
 
 .hero {
   position: relative;
-  min-height: 720px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -125,127 +129,156 @@ nav a:hover {
   background:
     linear-gradient(
       90deg,
-      rgba(5,6,8,0.94) 0%,
-      rgba(5,6,8,0.78) 42%,
-      rgba(5,6,8,0.38) 75%,
+      rgba(5,6,8,0.92) 0%,
+      rgba(5,6,8,0.78) 40%,
+      rgba(5,6,8,0.48) 72%,
       rgba(5,6,8,0.55) 100%
     ),
     url("sofa1.jpg") center center / cover no-repeat;
 }
 
-.hero-overlay {
+.hero::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0.25),
-      rgba(0,0,0,0.35)
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.08),
+    rgba(0,0,0,0.30)
+  );
   pointer-events: none;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 100px 0;
-  max-width: 800px;
+  width: min(850px, 100%);
+  padding: 90px 0;
 }
 
+/* Supports your current HTML */
+
+.hero .badge,
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  padding: 10px 18px;
-  margin-bottom: 25px;
-  border: 1px solid rgba(240,206,138,0.45);
+  padding: 9px 17px;
+  margin-bottom: 24px;
+
+  border: 1px solid rgba(242,207,134,0.45);
   border-radius: 999px;
-  background: rgba(10,11,13,0.55);
-  backdrop-filter: blur(12px);
+
+  background: rgba(10,11,13,0.52);
+  backdrop-filter: blur(10px);
+
   color: var(--gold-light);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
 }
 
+.hero h1,
 .hero h2 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 1.04;
+  color: white;
+  font-size: clamp(42px, 6vw, 70px);
+  line-height: 1.05;
   letter-spacing: -1.5px;
-  color: var(--white);
   max-width: 850px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
+.hero h1 span,
 .hero h2 span {
   color: var(--gold-light);
 }
 
 .hero p {
-  max-width: 720px;
+  max-width: 730px;
   color: #f0f1f3;
   font-size: 18px;
   line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-.hero p strong {
-  color: var(--white);
-}
-
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
   margin-bottom: 28px;
 }
 
-.btn {
+.hero p strong {
+  color: white;
+}
+
+/* =========================================================
+   BUTTONS
+   Works with .buttons AND .hero-buttons
+   ========================================================= */
+
+.buttons,
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-bottom: 25px;
+}
+
+.btn,
+.buttons a,
+.hero-buttons a {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  min-height: 54px;
-  padding: 13px 24px;
-  border-radius: 12px;
-  font-weight: 700;
-  transition: all 0.25s ease;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 12px 23px;
+
+  border-radius: 11px;
   border: 1px solid transparent;
+
+  font-weight: 700;
+  font-size: 15px;
+
+  transition: 0.25s ease;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, #f1cf8b, #c8994d);
-  color: #111;
-  box-shadow: 0 10px 30px rgba(214,173,99,0.25);
-}
-
-.btn-primary:hover {
+.btn:hover,
+.buttons a:hover,
+.hero-buttons a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 35px rgba(214,173,99,0.35);
 }
 
-.btn-whatsapp {
+.btn:first-child,
+.buttons a:first-child,
+.hero-buttons a:first-child {
+  background: linear-gradient(
+    135deg,
+    #f2cf86,
+    #c79648
+  );
+  color: #111;
+  box-shadow: 0 10px 28px rgba(214,173,99,0.25);
+}
+
+.btn-whatsapp,
+.buttons a:last-child,
+.hero-buttons a:last-child {
   background: var(--green);
   color: white;
-  box-shadow: 0 10px 30px rgba(25,184,91,0.22);
+  box-shadow: 0 10px 28px rgba(25,184,91,0.20);
 }
 
-.btn-whatsapp:hover {
-  transform: translateY(-2px);
-  background: #16a950;
-}
+/* =========================================================
+   HERO SERVICE TAGS
+   ========================================================= */
 
 .hero-services {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 9px;
 }
 
 .hero-services span {
-  padding: 8px 13px;
+  padding: 7px 12px;
   border-radius: 8px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.13);
-  color: #f3f4f5;
-  font-size: 13px;
+  color: #f5f5f5;
+  font-size: 12px;
 }
 
 /* =========================================================
@@ -260,11 +293,11 @@ nav a:hover {
 
 .quick-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4,1fr);
 }
 
 .quick-grid > div {
-  padding: 25px 20px;
+  padding: 23px 18px;
   text-align: center;
   border-right: 1px solid var(--border);
 }
@@ -275,190 +308,156 @@ nav a:hover {
 
 .quick-grid strong {
   display: block;
-  color: var(--white);
-  font-size: 16px;
+  color: white;
+  font-size: 15px;
 }
 
 .quick-grid span {
   display: block;
   color: var(--muted);
-  font-size: 13px;
-  margin-top: 3px;
+  font-size: 12px;
 }
 
 /* =========================================================
-   GENERAL SECTIONS
+   ALL SECTIONS
    ========================================================= */
 
-.section,
-.areas-section,
-.why-section,
-.contact-section {
-  padding: 95px 0;
+section {
+  padding: 85px 0;
   background: var(--black);
 }
 
-.section:nth-of-type(even) {
+section:nth-of-type(even) {
   background: #0e1014;
 }
 
 .section-heading {
   max-width: 760px;
-  margin: 0 auto 50px;
+  margin: 0 auto 45px;
   text-align: center;
 }
 
-.section-heading.left {
-  text-align: left;
-  margin-left: 0;
-}
-
-.section-heading > span {
-  display: inline-block;
-  color: var(--gold-light);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-.section-heading h2 {
+.section-heading h2,
+section > .container > h2 {
   font-family: "Playfair Display", serif;
-  color: var(--white);
-  font-size: clamp(32px, 4vw, 48px);
+  color: white;
+  font-size: clamp(32px, 4vw, 46px);
   line-height: 1.15;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
-.section-heading p {
+.section-heading p,
+section > .container > p {
   color: var(--muted);
   font-size: 16px;
 }
 
+.subtitle {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
 /* =========================================================
-   SERVICE CARDS
+   SERVICES
+   Supports .services + .card from your HTML
    ========================================================= */
 
+.services,
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
 }
 
+.card,
 .service-card {
   position: relative;
-  padding: 30px;
-  border-radius: 18px;
+  padding: 28px;
+  border-radius: 17px;
+
   background:
     linear-gradient(
       145deg,
       rgba(255,255,255,0.07),
       rgba(255,255,255,0.025)
     );
+
   border: 1px solid var(--border);
   box-shadow: 0 12px 35px rgba(0,0,0,0.20);
+
   transition: 0.3s ease;
 }
 
+.card:hover,
 .service-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(240,206,138,0.35);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  transform: translateY(-5px);
+  border-color: rgba(240,206,138,0.40);
+  box-shadow: var(--shadow);
 }
 
-.service-icon {
-  width: 54px;
-  height: 54px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  background: rgba(214,173,99,0.12);
-  border: 1px solid rgba(214,173,99,0.22);
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
+.card h3,
 .service-card h3 {
-  color: var(--white);
-  font-size: 20px;
+  color: white;
+  font-size: 19px;
   margin-bottom: 10px;
 }
 
+.card p,
 .service-card p {
   color: var(--muted);
   font-size: 14px;
 }
 
-/* =========================================================
-   CTA
-   ========================================================= */
+.service-icon {
+  width: 52px;
+  height: 52px;
 
-.cta-section {
-  padding: 65px 0;
-  background:
-    radial-gradient(
-      circle at 20% 50%,
-      rgba(214,173,99,0.15),
-      transparent 40%
-    ),
-    #111318;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
+  display: grid;
+  place-items: center;
 
-.cta-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
+  margin-bottom: 18px;
 
-.cta-inner > div span {
-  color: var(--gold-light);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
+  border-radius: 13px;
 
-.cta-inner h2 {
-  font-family: "Playfair Display", serif;
-  color: var(--white);
-  font-size: 38px;
-  margin: 5px 0 8px;
-}
+  background: rgba(214,173,99,0.12);
+  border: 1px solid rgba(214,173,99,0.22);
 
-.cta-inner p {
-  color: var(--muted);
+  font-size: 24px;
 }
 
 /* =========================================================
    GALLERY
    ========================================================= */
 
+.gallery,
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
 }
 
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
+  min-height: 270px;
+
+  border-radius: 17px;
   background: #15171c;
   border: 1px solid var(--border);
-  min-height: 280px;
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery img {
   width: 100%;
-  height: 300px;
+  height: 290px;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.06);
+.gallery-item:hover img,
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
 .gallery-caption {
@@ -466,47 +465,23 @@ nav a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 50px 20px 20px;
+
+  padding: 45px 18px 18px;
+
   background: linear-gradient(
     transparent,
-    rgba(0,0,0,0.9)
+    rgba(0,0,0,0.90)
   );
 }
 
 .gallery-caption h3 {
   color: white;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .gallery-caption p {
   color: #d5d7db;
-  font-size: 13px;
-}
-
-/* =========================================================
-   SERVICE AREAS
-   ========================================================= */
-
-.area-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.area-list span {
-  padding: 12px 20px;
-  border-radius: 999px;
-  color: #f1f2f4;
-  background: #171a20;
-  border: 1px solid var(--border);
-  font-weight: 600;
-  transition: 0.2s ease;
-}
-
-.area-list span:hover {
-  color: var(--gold-light);
-  border-color: rgba(214,173,99,0.4);
+  font-size: 12px;
 }
 
 /* =========================================================
@@ -515,52 +490,49 @@ nav a:hover {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 50px;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 45px;
   align-items: center;
 }
 
 .about-content p {
   color: var(--muted);
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 }
 
 .about-content strong {
-  color: var(--white);
+  color: white;
 }
 
 .about-card {
-  padding: 32px;
-  border-radius: 20px;
+  padding: 30px;
+  border-radius: 18px;
+
   background: linear-gradient(
     145deg,
     #1b1e24,
     #121419
   );
+
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 
 .about-card h3 {
   font-family: "Playfair Display", serif;
-  color: var(--white);
-  font-size: 27px;
-  margin-bottom: 25px;
+  color: white;
+  font-size: 26px;
+  margin-bottom: 22px;
 }
 
 .about-highlights {
   display: grid;
-  gap: 18px;
+  gap: 16px;
 }
 
 .about-highlights > div {
-  padding-bottom: 18px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--border);
-}
-
-.about-highlights > div:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
 }
 
 .about-highlights strong {
@@ -572,7 +544,34 @@ nav a:hover {
   display: block;
   color: var(--muted);
   font-size: 13px;
-  margin-top: 3px;
+}
+
+/* =========================================================
+   SERVICE AREAS
+   ========================================================= */
+
+.area-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.area-list span {
+  padding: 10px 17px;
+  border-radius: 999px;
+
+  color: #f1f2f4;
+  background: #171a20;
+  border: 1px solid var(--border);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.area-list span:hover {
+  color: var(--gold-light);
+  border-color: rgba(214,173,99,0.4);
 }
 
 /* =========================================================
@@ -581,27 +580,28 @@ nav a:hover {
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(4,1fr);
+  gap: 17px;
 }
 
 .why-box {
   text-align: center;
-  padding: 28px 20px;
-  border-radius: 18px;
+  padding: 26px 18px;
+
+  border-radius: 17px;
   background: #15171c;
   border: 1px solid var(--border);
 }
 
 .why-icon {
-  font-size: 30px;
-  margin-bottom: 12px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .why-box h3 {
   color: white;
-  font-size: 17px;
-  margin-bottom: 8px;
+  font-size: 16px;
+  margin-bottom: 7px;
 }
 
 .why-box p {
@@ -615,32 +615,69 @@ nav a:hover {
 
 .review-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
 }
 
 .review-card {
-  padding: 28px;
+  padding: 26px;
   background: #15171c;
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 17px;
 }
 
 .stars {
   color: var(--gold-light);
   letter-spacing: 3px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .review-card p {
   color: #d3d6db;
   font-size: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .review-card strong {
   color: white;
   font-size: 13px;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta-section {
+  padding: 60px 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(214,173,99,0.15),
+      transparent 42%
+    ),
+    #111318;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.cta-inner h2 {
+  font-family: "Playfair Display", serif;
+  color: white;
+  font-size: 36px;
+  margin: 5px 0;
+}
+
+.cta-inner p {
+  color: var(--muted);
 }
 
 /* =========================================================
@@ -650,20 +687,20 @@ nav a:hover {
 .contact-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 30px;
+  gap: 25px;
 }
 
 .contact-card,
 .map-box {
-  padding: 30px;
-  border-radius: 20px;
+  padding: 28px;
+  border-radius: 18px;
   background: #15171c;
   border: 1px solid var(--border);
 }
 
 .contact-card h3 {
-  color: var(--white);
-  margin: 18px 0 5px;
+  color: white;
+  margin: 16px 0 5px;
   font-size: 17px;
 }
 
@@ -683,20 +720,20 @@ nav a:hover {
 .contact-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
+  gap: 10px;
+  margin-top: 23px;
 }
 
 .map-box {
-  padding: 10px;
+  padding: 9px;
   overflow: hidden;
 }
 
 .map-box iframe {
   width: 100%;
-  min-height: 380px;
+  min-height: 370px;
   border: 0;
-  border-radius: 14px;
+  border-radius: 13px;
 }
 
 /* =========================================================
@@ -704,8 +741,9 @@ nav a:hover {
    ========================================================= */
 
 .final-cta {
-  padding: 80px 0;
+  padding: 75px 0;
   text-align: center;
+
   background:
     radial-gradient(
       circle at center,
@@ -713,51 +751,65 @@ nav a:hover {
       transparent 55%
     ),
     #0b0d10;
+
   border-top: 1px solid var(--border);
 }
 
 .final-cta h2 {
   font-family: "Playfair Display", serif;
   color: white;
-  font-size: clamp(32px, 5vw, 50px);
+  font-size: clamp(32px,5vw,50px);
   margin-bottom: 10px;
 }
 
 .final-cta p {
   color: var(--muted);
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
+.final-cta .buttons,
 .final-cta .hero-buttons {
   justify-content: center;
 }
 
 /* =========================================================
-   FLOATING BUTTONS
+   FLOATING CALL + WHATSAPP
    ========================================================= */
 
 .floating-call,
 .floating-whatsapp {
   position: fixed;
-  right: 20px;
-  width: 58px;
-  height: 58px;
+  right: 18px;
+
+  width: 57px;
+  height: 57px;
+
   border-radius: 50%;
+
   display: grid;
   place-items: center;
+
   color: white;
-  font-size: 25px;
+  font-size: 24px;
+
   z-index: 999;
+
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+  transition: 0.2s ease;
 }
 
 .floating-call {
-  bottom: 92px;
-  background: linear-gradient(135deg,#e4bd72,#b7863e);
+  bottom: 90px;
+  background: linear-gradient(
+    135deg,
+    #e4bd72,
+    #b7863e
+  );
 }
 
 .floating-whatsapp {
-  bottom: 22px;
+  bottom: 20px;
   background: #19b85b;
 }
 
@@ -772,21 +824,21 @@ nav a:hover {
 
 footer {
   background: #07080a;
-  padding: 60px 0 20px;
+  padding: 55px 0 20px;
   border-top: 1px solid var(--border);
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
 }
 
 .footer-grid h3 {
   font-family: "Playfair Display", serif;
   color: white;
-  font-size: 21px;
-  margin-bottom: 12px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-grid p {
@@ -796,8 +848,8 @@ footer {
 
 .footer-bottom {
   text-align: center;
-  padding-top: 30px;
-  margin-top: 35px;
+  padding-top: 25px;
+  margin-top: 30px;
   border-top: 1px solid var(--border);
 }
 
@@ -807,7 +859,7 @@ footer {
 }
 
 /* =========================================================
-   MOBILE
+   TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -817,11 +869,7 @@ footer {
   }
 
   .logo h1 {
-    font-size: 23px;
-  }
-
-  .logo span {
-    font-size: 11px;
+    font-size: 24px;
   }
 
   nav {
@@ -829,35 +877,31 @@ footer {
   }
 
   nav a {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .hero {
-    min-height: 700px;
-    background:
-      linear-gradient(
-        90deg,
-        rgba(5,6,8,0.90),
-        rgba(5,6,8,0.60)
-      ),
-      url("sofa1.jpg") center / cover no-repeat;
+    min-height: 680px;
   }
 
   .hero-content {
-    padding: 75px 0;
+    padding: 70px 0;
   }
 
+  .hero h1,
   .hero h2 {
-    font-size: clamp(39px, 9vw, 60px);
+    font-size: clamp(40px,8vw,60px);
   }
 
+  .services,
   .service-grid,
+  .gallery,
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
   }
 
   .why-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
   }
 
   .about-grid,
@@ -875,23 +919,41 @@ footer {
   }
 }
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 650px) {
 
   .container {
-    width: min(92%, 540px);
+    width: 92%;
+  }
+
+  header,
+  .site-header {
+    position: sticky;
   }
 
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px 0;
-    gap: 12px;
+    padding: 13px 0;
+    gap: 10px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+
+  .logo span {
+    font-size: 11px;
   }
 
   nav {
     width: 100%;
     overflow-x: auto;
-    padding-bottom: 5px;
+    gap: 20px;
+    padding-bottom: 4px;
   }
 
   nav a {
@@ -899,75 +961,106 @@ footer {
     font-size: 13px;
   }
 
+  /* HERO */
+
   .hero {
-    min-height: 760px;
-    align-items: flex-end;
+    min-height: 720px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5,6,8,0.90),
+        rgba(5,6,8,0.60)
+      ),
+      url("sofa1.jpg") center / cover no-repeat;
   }
 
   .hero-content {
-    padding: 55px 0 65px;
+    padding: 55px 0 60px;
   }
 
+  .hero .badge,
   .hero-badge {
     font-size: 11px;
     padding: 8px 12px;
+    margin-bottom: 19px;
   }
 
+  .hero h1,
   .hero h2 {
-    font-size: 42px;
-    line-height: 1.05;
+    font-size: 40px;
+    line-height: 1.06;
+    letter-spacing: -0.8px;
+    margin-bottom: 20px;
   }
 
   .hero p {
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.75;
+    margin-bottom: 23px;
   }
 
+  .buttons,
   .hero-buttons {
     flex-direction: column;
+    gap: 10px;
   }
 
-  .hero-buttons .btn {
+  .btn,
+  .buttons a,
+  .hero-buttons a {
     width: 100%;
+    min-height: 51px;
   }
 
   .hero-services {
-    gap: 7px;
+    gap: 6px;
   }
 
   .hero-services span {
-    font-size: 11px;
-    padding: 7px 9px;
+    font-size: 10px;
+    padding: 6px 8px;
   }
 
+  /* QUICK SERVICES */
+
   .quick-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .quick-grid > div {
+    padding: 18px 10px;
+    border-bottom: 1px solid var(--border);
   }
 
   .quick-grid > div:nth-child(2) {
     border-right: 0;
   }
 
-  .quick-grid > div {
-    border-bottom: 1px solid var(--border);
-  }
+  /* SECTIONS */
 
-  .section,
-  .areas-section,
-  .why-section,
-  .contact-section {
-    padding: 70px 0;
+  section {
+    padding: 65px 0;
   }
 
   .section-heading {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 
-  .section-heading h2 {
-    font-size: 34px;
+  .section-heading h2,
+  section > .container > h2 {
+    font-size: 32px;
   }
 
+  .subtitle {
+    font-size: 14px;
+  }
+
+  /* SERVICES */
+
+  .services,
   .service-grid,
+  .gallery,
   .gallery-grid,
   .review-grid,
   .why-grid,
@@ -975,296 +1068,87 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .gallery-item img {
-    height: 290px;
+  .card,
+  .service-card {
+    padding: 23px;
   }
+
+  /* GALLERY */
+
+  .gallery-item {
+    min-height: 260px;
+  }
+
+  .gallery-item img,
+  .gallery img {
+    height: 275px;
+  }
+
+  /* CTA */
 
   .cta-inner h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
-  .floating-call,
-  .floating-whatsapp {
-    right: 15px;
-    width: 55px;
-    height: 55px;
-  }
-}
-
-/* =========================================================
-   EXTRA MOBILE POLISH
-   ========================================================= */
-
-@media (max-width: 420px) {
-
-  .logo h1 {
-    font-size: 21px;
-  }
-
-  .hero h2 {
-    font-size: 38px;
-  }
-
-  .hero {
-    min-height: 750px;
-  }
-
-  .service-card {
-    padding: 24px;
-  }
+  /* CONTACT */
 
   .contact-card,
   .map-box {
     padding: 20px;
   }
-  }/* =========================================================
-   FINAL HERO OVERRIDE — PREMIUM MODERN LOOK
+
+  .map-box iframe {
+    min-height: 300px;
+  }
+
+  /* FLOATING BUTTONS */
+
+  .floating-call,
+  .floating-whatsapp {
+    width: 54px;
+    height: 54px;
+    right: 14px;
+  }
+
+  .floating-call {
+    bottom: 84px;
+  }
+
+  .floating-whatsapp {
+    bottom: 17px;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES
    ========================================================= */
 
-.hero {
-  position: relative !important;
-  min-height: 760px !important;
-  display: flex !important;
-  align-items: center !important;
-  overflow: hidden !important;
-
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(7, 10, 14, 0.92) 0%,
-      rgba(7, 10, 14, 0.72) 42%,
-      rgba(7, 10, 14, 0.30) 75%,
-      rgba(7, 10, 14, 0.20) 100%
-    ),
-    url("sofa1.jpg") !important;
-
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  color: #ffffff !important;
-}
-
-.hero h2 {
-  color: #ffffff !important;
-  font-family: "Playfair Display", Georgia, serif !important;
-  font-weight: 800 !important;
-  text-shadow: 0 4px 25px rgba(0,0,0,0.45);
-}
-
-.hero h2 span {
-  color: #f1c36b !important;
-}
-
-.hero p {
-  color: #f5f6f8 !important;
-}
-
-.hero-badge {
-  background: rgba(255,255,255,0.10) !important;
-  border: 1px solid rgba(255,255,255,0.28) !important;
-  color: #ffffff !important;
-  backdrop-filter: blur(15px);
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #f4c76d, #d99a35) !important;
-  color: #111111 !important;
-}
-
-.btn-whatsapp {
-  background: #16b85a !important;
-}
-
-/* Premium clean sections */
-.quick-services {
-  background: #101318 !important;
-}
-
-.section,
-.areas-section,
-.why-section,
-.contact-section {
-  background: #0b0e13 !important;
-}
-
-.service-card,
-.review-card,
-.why-box,
-.contact-card,
-.about-card {
-  background: linear-gradient(
-    145deg,
-    #171b22,
-    #0f1217
-  ) !important;
-}
-
-.gallery-item {
-  background: #11151b !important;
-}
-
-/* Mobile */
-@media (max-width: 650px) {
-
-  .hero {
-    min-height: 760px !important;
-
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(7,10,14,0.35) 0%,
-        rgba(7,10,14,0.50) 45%,
-        rgba(7,10,14,0.88) 100%
-      ),
-      url("sofa1.jpg") !important;
-
-    background-position: center center !important;
-    background-size: cover !important;
-  }
-
-  .hero-content {
-    padding: 70px 0 55px !important;
-  }
-
-  .hero h2 {
-    font-size: 43px !important;
-    line-height: 1.06 !important;
-  }
-
-  .hero p {
-    font-size: 16px !important;
-    line-height: 1.7 !important;
-  }
-}/* =========================================================
-   MEDIUM + ATTRACTIVE TEXT POLISH
-   ========================================================= */
-
-body {
-  font-size: 16px;
-}
-
-/* Logo */
-.logo h1 {
-  font-size: 27px;
-}
-
-.logo span {
-  font-size: 12px;
-}
-
-/* Navigation */
-nav a {
-  font-size: 14px;
-}
-
-/* Hero */
-.hero h2 {
-  font-size: clamp(38px, 5vw, 58px);
-  line-height: 1.08;
-  letter-spacing: -0.8px;
-}
-
-.hero p {
-  font-size: 17px;
-  line-height: 1.7;
-  max-width: 680px;
-}
-
-/* Section headings */
-.section-heading h2 {
-  font-size: clamp(30px, 4vw, 44px);
-}
-
-.section-heading p {
-  font-size: 15px;
-}
-
-/* Service headings */
-.service-card h3 {
-  font-size: 18px;
-}
-
-.service-card p {
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-/* Gallery */
-.gallery-caption h3 {
-  font-size: 17px;
-}
-
-.gallery-caption p {
-  font-size: 13px;
-}
-
-/* About */
-.about-card h3 {
-  font-size: 25px;
-}
-
-.about-content p {
-  font-size: 15px;
-}
-
-/* Reviews */
-.review-card p {
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-/* Contact */
-.contact-card h3 {
-  font-size: 16px;
-}
-
-.contact-card p {
-  font-size: 14px;
-}
-
-/* Buttons */
-.btn {
-  font-size: 15px;
-}
-
-/* MOBILE */
-@media (max-width: 650px) {
+@media (max-width: 420px) {
 
   .logo h1 {
-    font-size: 23px;
+    font-size: 20px;
   }
 
-  nav a {
-    font-size: 13px;
+  .hero {
+    min-height: 700px;
   }
 
+  .hero h1,
   .hero h2 {
-    font-size: 39px;
-    line-height: 1.08;
+    font-size: 36px;
   }
 
   .hero p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .section-heading h2 {
-    font-size: 32px;
-  }
-
-  .section-heading p {
     font-size: 14px;
   }
 
-  .service-card h3 {
-    font-size: 18px;
+  .card,
+  .service-card {
+    padding: 21px;
   }
 
-  .service-card p {
-    font-size: 14px;
+  .section-heading h2,
+  section > .container > h2 {
+    font-size: 29px;
   }
-
-  .btn {
-    font-size: 15px;
-  }
-}
+   }
