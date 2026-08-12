@@ -1017,4 +1017,122 @@ footer {
   .map-box {
     padding: 20px;
   }
+  }/* =========================================================
+   FINAL HERO OVERRIDE — PREMIUM MODERN LOOK
+   ========================================================= */
+
+.hero {
+  position: relative !important;
+  min-height: 760px !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(7, 10, 14, 0.92) 0%,
+      rgba(7, 10, 14, 0.72) 42%,
+      rgba(7, 10, 14, 0.30) 75%,
+      rgba(7, 10, 14, 0.20) 100%
+    ),
+    url("sofa1.jpg") !important;
+
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  color: #ffffff !important;
+}
+
+.hero h2 {
+  color: #ffffff !important;
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-weight: 800 !important;
+  text-shadow: 0 4px 25px rgba(0,0,0,0.45);
+}
+
+.hero h2 span {
+  color: #f1c36b !important;
+}
+
+.hero p {
+  color: #f5f6f8 !important;
+}
+
+.hero-badge {
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(255,255,255,0.28) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(15px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f4c76d, #d99a35) !important;
+  color: #111111 !important;
+}
+
+.btn-whatsapp {
+  background: #16b85a !important;
+}
+
+/* Premium clean sections */
+.quick-services {
+  background: #101318 !important;
+}
+
+.section,
+.areas-section,
+.why-section,
+.contact-section {
+  background: #0b0e13 !important;
+}
+
+.service-card,
+.review-card,
+.why-box,
+.contact-card,
+.about-card {
+  background: linear-gradient(
+    145deg,
+    #171b22,
+    #0f1217
+  ) !important;
+}
+
+.gallery-item {
+  background: #11151b !important;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+
+  .hero {
+    min-height: 760px !important;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(7,10,14,0.35) 0%,
+        rgba(7,10,14,0.50) 45%,
+        rgba(7,10,14,0.88) 100%
+      ),
+      url("sofa1.jpg") !important;
+
+    background-position: center center !important;
+    background-size: cover !important;
   }
+
+  .hero-content {
+    padding: 70px 0 55px !important;
+  }
+
+  .hero h2 {
+    font-size: 43px !important;
+    line-height: 1.06 !important;
+  }
+
+  .hero p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+}
