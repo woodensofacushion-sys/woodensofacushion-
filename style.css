@@ -1135,4 +1135,136 @@ footer {
     font-size: 16px !important;
     line-height: 1.7 !important;
   }
+}/* =========================================================
+   MEDIUM + ATTRACTIVE TEXT POLISH
+   ========================================================= */
+
+body {
+  font-size: 16px;
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 27px;
+}
+
+.logo span {
+  font-size: 12px;
+}
+
+/* Navigation */
+nav a {
+  font-size: 14px;
+}
+
+/* Hero */
+.hero h2 {
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.8px;
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* Section headings */
+.section-heading h2 {
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.section-heading p {
+  font-size: 15px;
+}
+
+/* Service headings */
+.service-card h3 {
+  font-size: 18px;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Gallery */
+.gallery-caption h3 {
+  font-size: 17px;
+}
+
+.gallery-caption p {
+  font-size: 13px;
+}
+
+/* About */
+.about-card h3 {
+  font-size: 25px;
+}
+
+.about-content p {
+  font-size: 15px;
+}
+
+/* Reviews */
+.review-card p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Contact */
+.contact-card h3 {
+  font-size: 16px;
+}
+
+.contact-card p {
+  font-size: 14px;
+}
+
+/* Buttons */
+.btn {
+  font-size: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+
+  .logo h1 {
+    font-size: 23px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .hero h2 {
+    font-size: 39px;
+    line-height: 1.08;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .section-heading p {
+    font-size: 14px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
 }
