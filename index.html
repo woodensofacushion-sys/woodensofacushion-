@@ -54,7 +54,9 @@ button{cursor:pointer}
 .header-actions{display:flex;align-items:center;gap:10px}
 .header-action{position:relative;border:0;background:none;color:#333;text-align:center;padding:4px}
 .header-action span{display:block;font-size:21px}
-.cart-count{position:absolute;top:0;right:0;min-width:18px;height:18px;display:grid!important;place-items:center;border-radius:50%;background:var(--maroon);color:#fff;font-size:10px!important}.nav{background:var(--maroon);color:#fff}
+.cart-count{position:absolute;top:0;right:0;min-width:18px;height:18px;display:grid!important;place-items:center;border-radius:50%;background:var(--maroon);color:#fff;font-size:10px!important}
+
+.nav{background:var(--maroon);color:#fff}
 .nav-inner{min-height:48px;display:flex;align-items:center}
 .category-menu{padding:13px 20px;background:#fff;color:var(--maroon);font-weight:900;white-space:nowrap}
 .nav-links{display:flex;flex:1;min-width:0;justify-content:center;overflow-x:auto;scrollbar-width:none}
@@ -141,7 +143,9 @@ summary{cursor:pointer;font-weight:900}details p{color:var(--muted)}
 .categories{grid-template-columns:repeat(4,1fr)}.products{grid-template-columns:repeat(2,1fr)}
 .services{grid-template-columns:repeat(4,1fr)}.about{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(3,1fr)}
 .footer-grid{grid-template-columns:1fr 1fr}
-}@media(max-width:680px){
+}
+
+@media(max-width:680px){
 .wrap{padding-left:14px;padding-right:14px}
 .topbar-inner{min-height:32px;justify-content:center;text-align:center}.topbar-inner span:last-child{display:none}
 .header-row{min-height:auto;padding:10px 0;grid-template-columns:1fr auto;gap:10px}
@@ -215,7 +219,8 @@ summary{cursor:pointer;font-weight:900}details p{color:var(--muted)}
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
-    <a class="quote-button" href="https://wa.me/919962979410?text=Hi%20Wooden%20Sofa%20Cushion%2C%20I%20need%20a%20free%20quote." target="_blank" rel="noopener">Free Quote</a>  </div>
+    <a class="quote-button" href="https://wa.me/919962979410?text=Hi%20Wooden%20Sofa%20Cushion%2C%20I%20need%20a%20free%20quote." target="_blank" rel="noopener">Free Quote</a>
+  </div>
 </nav>
 
 <main id="home">
@@ -535,7 +540,9 @@ function openPhoto(src,title){
   </style></head>
   <body><img src="${String(src).replace(/"/g,"&quot;")}" alt="${escapeHTML(title||"Wooden Sofa Cushion")}"></body></html>`);
   tab.document.close();
-}function renderProducts(list=PRODUCTS){
+}
+
+function renderProducts(list=PRODUCTS){
   const grid=document.getElementById("productGrid");
   if(!list.length){
     grid.innerHTML='<div style="grid-column:1/-1;padding:35px;text-align:center;color:#777;background:#fff;border:1px solid var(--line);border-radius:10px">No matching products found.<br><br><button class="btn btn-maroon" onclick="resetProducts()">Show All</button></div>';
@@ -666,6 +673,7 @@ function sendCartWhatsApp(){
   const items=cart.map(x=>"- "+x.name+" x"+x.qty).join("\n");
   whatsapp("Hi Wooden Sofa Cushion, I want to enquire about these items:\n\n"+items+"\n\nPlease share the final price and details.");
 }
+
 function openLiveChat(){
   if(window.Tawk_API&&typeof window.Tawk_API.maximize==="function"){
     window.Tawk_API.maximize();
@@ -694,14 +702,3 @@ s0.parentNode.insertBefore(s1,s0);
 
 </body>
 </html>
-  </div>
-</nav>
-
-<main id="home">
-
-<section class="hero">
-  <div class="wrap hero-inner">
-    <div class="hero-label">CUSTOM WOODEN SOFAS • SOFA REPAIR • CHENNAI</div>
-    <h1>Custom Wooden <span>Sofa Cushion</span> & Sofa Work in Chennai</h1>
-    <p>Made-to-measure wooden sofa cushions, new wooden sofas, sofa repair, foam replacement, re-upholstery and furniture seating work from Poonamallee across Chennai.</p>
-
