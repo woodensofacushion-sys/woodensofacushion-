@@ -54,11 +54,6 @@ content="https://woodensofacushion.in/">
 
 <style>
 
-/* =========================================================
-   WOODEN SOFA CUSHION
-   FASHABLE-STYLE STOREFRONT
-   ========================================================= */
-
 *{
   box-sizing:border-box;
   margin:0;
@@ -97,9 +92,7 @@ input{
   --white:#fff;
 }
 
-/* =========================================================
-   TOP HEADER
-   ========================================================= */
+/* HEADER */
 
 .top-header{
   background:#fff;
@@ -119,8 +112,6 @@ input{
   align-items:center;
   gap:25px;
 }
-
-/* BRAND */
 
 .brand{
   display:flex;
@@ -162,8 +153,6 @@ input{
   margin-top:4px;
 }
 
-/* SEARCH */
-
 .search-box{
   height:54px;
   border:1px solid #ddd;
@@ -190,8 +179,6 @@ input{
   font-size:29px;
   cursor:pointer;
 }
-
-/* HEADER ACTIONS */
 
 .header-actions{
   display:flex;
@@ -222,9 +209,7 @@ input{
   font-weight:700;
 }
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+/* NAVIGATION */
 
 .main-nav{
   border-top:1px solid #f1f1f1;
@@ -259,9 +244,7 @@ input{
   border-radius:5px;
 }
 
-/* =========================================================
-   HERO
-   ========================================================= */
+/* HERO */
 
 .hero{
   background:#fff;
@@ -386,9 +369,7 @@ input{
   margin-top:4px;
 }
 
-/* =========================================================
-   CENTER BRAND SECTION
-   ========================================================= */
+/* CENTER BRAND */
 
 .brand-center{
   text-align:center;
@@ -410,9 +391,7 @@ input{
   text-transform:uppercase;
 }
 
-/* =========================================================
-   CATEGORY SECTION
-   ========================================================= */
+/* GENERAL SECTIONS */
 
 .section{
   max-width:1400px;
@@ -440,6 +419,8 @@ input{
   color:var(--pink);
 }
 
+/* CATEGORIES */
+
 .category-grid{
   display:grid;
   grid-template-columns:repeat(7,1fr);
@@ -450,8 +431,6 @@ input{
   text-align:center;
   cursor:pointer;
 }
-
-/* UPDATED: PERFECT CIRCLE IMAGE */
 
 .category-image{
   width:145px;
@@ -478,9 +457,8 @@ input{
   border-radius:50%;
   transform:rotate(35deg);
   pointer-events:none;
+  z-index:4;
 }
-
-/* UPDATED IMAGE FIT */
 
 .category-image img{
   width:100%;
@@ -499,9 +477,7 @@ input{
   line-height:1.4;
 }
 
-/* =========================================================
-   ELITE OFFERING
-   ========================================================= */
+/* ELITE */
 
 .elite{
   background:#fafafa;
@@ -562,9 +538,7 @@ input{
   font-size:14px;
 }
 
-/* =========================================================
-   FEATURE STRIP
-   ========================================================= */
+/* FEATURES */
 
 .feature-strip{
   max-width:1400px;
@@ -597,9 +571,7 @@ input{
   font-size:14px;
 }
 
-/* =========================================================
-   GALLERY
-   ========================================================= */
+/* GALLERY */
 
 .gallery-section{
   max-width:1400px;
@@ -700,9 +672,7 @@ input{
   margin-top:5px;
 }
 
-/* =========================================================
-   WHY US
-   ========================================================= */
+/* WHY US */
 
 .why{
   background:#fafafa;
@@ -734,9 +704,7 @@ input{
   font-size:14px;
 }
 
-/* =========================================================
-   FAQ
-   ========================================================= */
+/* FAQ */
 
 .faq{
   max-width:900px;
@@ -759,9 +727,7 @@ input{
   line-height:1.7;
 }
 
-/* =========================================================
-   CONTACT
-   ========================================================= */
+/* CONTACT */
 
 .contact{
   max-width:none;
@@ -809,9 +775,7 @@ input{
   color:#fff;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* FOOTER */
 
 footer{
   background:#202020;
@@ -838,9 +802,7 @@ footer p{
   font-size:14px;
 }
 
-/* =========================================================
-   IMAGE VIEWER
-   ========================================================= */
+/* IMAGE VIEWER */
 
 .viewer{
   display:none;
@@ -916,17 +878,13 @@ footer p{
   margin-top:15px;
 }
 
-/* =========================================================
-   MOBILE BOTTOM NAV
-   ========================================================= */
+/* MOBILE NAV */
 
 .mobile-bottom{
   display:none;
 }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+/* RESPONSIVE */
 
 @media(max-width:1100px){
 
@@ -1203,9 +1161,7 @@ footer p{
 
 <body>
 
-<!-- ======================================================
-     HEADER
-     ====================================================== -->
+<!-- HEADER -->
 
 <header class="top-header">
 
@@ -1230,7 +1186,9 @@ footer p{
         placeholder="Search for products"
         autocomplete="off">
 
-      <button id="searchButton" aria-label="Search">
+      <button
+        id="searchButton"
+        aria-label="Search">
         🔍
       </button>
 
@@ -1238,12 +1196,18 @@ footer p{
 
     <div class="header-actions">
 
-      <a href="#gallery" class="header-action" aria-label="Wishlist">
+      <a
+        href="#gallery"
+        class="header-action"
+        aria-label="Wishlist">
         ♡
         <span class="badge">0</span>
       </a>
 
-      <a href="#contact" class="header-action" aria-label="Cart">
+      <a
+        href="#contact"
+        class="header-action"
+        aria-label="Cart">
         🛒
         <span class="badge">0</span>
       </a>
@@ -1256,17 +1220,29 @@ footer p{
 
     <div class="nav-inner">
 
-      <a href="#categories">All Categories</a>
+      <a href="#categories">
+        All Categories
+      </a>
 
-      <a href="#services">Services</a>
+      <a href="#services">
+        Services
+      </a>
 
-      <a href="#gallery">Our Work</a>
+      <a href="#gallery">
+        Our Work
+      </a>
 
-      <a href="#why-us">Why Us</a>
+      <a href="#why-us">
+        Why Us
+      </a>
 
-      <a href="#faq">FAQ</a>
+      <a href="#faq">
+        FAQ
+      </a>
 
-      <a href="#contact" class="quote-nav">
+      <a
+        href="#contact"
+        class="quote-nav">
         Get a Quote
       </a>
 
@@ -1279,9 +1255,7 @@ footer p{
 
 <main id="home">
 
-<!-- ======================================================
-     HERO
-     ====================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1307,11 +1281,15 @@ footer p{
 
       <div class="hero-buttons">
 
-        <a href="#gallery" class="btn btn-primary">
+        <a
+          href="#gallery"
+          class="btn btn-primary">
           View Our Work
         </a>
 
-        <a href="tel:+919962979410" class="btn btn-outline">
+        <a
+          href="tel:+919962979410"
+          class="btn btn-outline">
           Call for Enquiry
         </a>
 
@@ -1320,9 +1298,7 @@ footer p{
       <div class="hero-trust">
 
         <span>✓ Made to measure</span>
-
         <span>✓ Chennai service</span>
-
         <span>✓ Real work photos</span>
 
       </div>
@@ -1342,7 +1318,9 @@ footer p{
 
         <div>
 
-          <strong>Custom Wooden Sofa</strong>
+          <strong>
+            Custom Wooden Sofa
+          </strong>
 
           <small>
             Designed for your space
@@ -1363,9 +1341,7 @@ footer p{
 </section>
 
 
-<!-- ======================================================
-     CENTER BUSINESS NAME
-     ====================================================== -->
+<!-- CENTER BUSINESS NAME -->
 
 <section class="brand-center">
 
@@ -1380,17 +1356,19 @@ footer p{
 </section>
 
 
-<!-- ======================================================
-     CATEGORIES
-     ====================================================== -->
+<!-- CATEGORIES -->
 
-<section class="section" id="categories">
+<section
+  class="section"
+  id="categories">
 
   <div class="section-title">
 
     <span>Explore</span>
 
-    <h2>ALL CATEGORIES</h2>
+    <h2>
+      ALL CATEGORIES
+    </h2>
 
   </div>
 
@@ -1398,8 +1376,9 @@ footer p{
   <div class="category-grid">
 
 
-    <div class="category"
-         data-filter="customised-wooden-sofa">
+    <div
+      class="category"
+      data-filter="customised-wooden-sofa">
 
       <div class="category-image">
 
@@ -1416,8 +1395,9 @@ footer p{
     </div>
 
 
-    <div class="category"
-         data-filter="dining-furniture">
+    <div
+      class="category"
+      data-filter="dining-furniture">
 
       <div class="category-image">
 
@@ -1434,8 +1414,9 @@ footer p{
     </div>
 
 
-    <div class="category"
-         data-filter="headboards">
+    <div
+      class="category"
+      data-filter="headboards">
 
       <div class="category-image">
 
@@ -1452,8 +1433,9 @@ footer p{
     </div>
 
 
-    <div class="category"
-         data-filter="lounge-chairs">
+    <div
+      class="category"
+      data-filter="lounge-chairs">
 
       <div class="category-image">
 
@@ -1470,8 +1452,9 @@ footer p{
     </div>
 
 
-    <div class="category"
-         data-filter="recliner-sofa">
+    <div
+      class="category"
+      data-filter="recliner-sofa">
 
       <div class="category-image">
 
@@ -1488,8 +1471,9 @@ footer p{
     </div>
 
 
-    <div class="category"
-         data-filter="sofa-repair-before-after">
+    <div
+      class="category"
+      data-filter="sofa-repair-before-after">
 
       <div class="category-image">
 
@@ -1506,8 +1490,9 @@ footer p{
     </div>
 
 
-    <div class="category"
-         data-filter="wooden-sofa-cushions">
+    <div
+      class="category"
+      data-filter="wooden-sofa-cushions">
 
       <div class="category-image">
 
@@ -1529,17 +1514,19 @@ footer p{
 </section>
 
 
-<!-- ======================================================
-     ELITE OFFERING
-     ====================================================== -->
+<!-- ELITE OFFERING -->
 
-<section class="section elite" id="services">
+<section
+  class="section elite"
+  id="services">
 
   <div class="section-title">
 
     <span>What we do</span>
 
-    <h2>ELITE OFFERING</h2>
+    <h2>
+      ELITE OFFERING
+    </h2>
 
   </div>
 
@@ -1549,7 +1536,9 @@ footer p{
 
     <article class="offering">
 
-      <div class="offering-icon">🪵</div>
+      <div class="offering-icon">
+        🪵
+      </div>
 
       <h3>
         Custom Wooden Sofas
@@ -1560,8 +1549,9 @@ footer p{
         preferred dimensions, finish and seating needs.
       </p>
 
-      <a href="#gallery"
-         data-filter="customised-wooden-sofa">
+      <a
+        href="#gallery"
+        data-filter="customised-wooden-sofa">
         View work →
       </a>
 
@@ -1570,7 +1560,9 @@ footer p{
 
     <article class="offering">
 
-      <div class="offering-icon">✦</div>
+      <div class="offering-icon">
+        ✦
+      </div>
 
       <h3>
         Dining Furniture
@@ -1581,8 +1573,9 @@ footer p{
         restaurant seating for homes and commercial interiors.
       </p>
 
-      <a href="#gallery"
-         data-filter="dining-furniture">
+      <a
+        href="#gallery"
+        data-filter="dining-furniture">
         View work →
       </a>
 
@@ -1591,7 +1584,9 @@ footer p{
 
     <article class="offering">
 
-      <div class="offering-icon">✦</div>
+      <div class="offering-icon">
+        ✦
+      </div>
 
       <h3>
         Custom Headboards
@@ -1602,8 +1597,9 @@ footer p{
         bedrooms and premium interiors.
       </p>
 
-      <a href="#gallery"
-         data-filter="headboards">
+      <a
+        href="#gallery"
+        data-filter="headboards">
         View work →
       </a>
 
@@ -1612,7 +1608,9 @@ footer p{
 
     <article class="offering">
 
-      <div class="offering-icon">✦</div>
+      <div class="offering-icon">
+        ✦
+      </div>
 
       <h3>
         Lounge Chairs
@@ -1623,8 +1621,9 @@ footer p{
         reception areas, cafés and hospitality spaces.
       </p>
 
-      <a href="#gallery"
-         data-filter="lounge-chairs">
+      <a
+        href="#gallery"
+        data-filter="lounge-chairs">
         View work →
       </a>
 
@@ -1633,7 +1632,9 @@ footer p{
 
     <article class="offering">
 
-      <div class="offering-icon">🪑</div>
+      <div class="offering-icon">
+        🪑
+      </div>
 
       <h3>
         Recliner Sofa
@@ -1644,8 +1645,9 @@ footer p{
         restoration and refurbishment work.
       </p>
 
-      <a href="#gallery"
-         data-filter="recliner-sofa">
+      <a
+        href="#gallery"
+        data-filter="recliner-sofa">
         View work →
       </a>
 
@@ -1654,7 +1656,9 @@ footer p{
 
     <article class="offering">
 
-      <div class="offering-icon">✦</div>
+      <div class="offering-icon">
+        ✦
+      </div>
 
       <h3>
         Sofa Repair
@@ -1665,8 +1669,9 @@ footer p{
         and before-and-after transformation work.
       </p>
 
-      <a href="#gallery"
-         data-filter="sofa-repair-before-after">
+      <a
+        href="#gallery"
+        data-filter="sofa-repair-before-after">
         View work →
       </a>
 
@@ -1675,7 +1680,9 @@ footer p{
 
     <article class="offering">
 
-      <div class="offering-icon">🛋</div>
+      <div class="offering-icon">
+        🛋
+      </div>
 
       <h3>
         Wooden Sofa Cushions
@@ -1686,8 +1693,9 @@ footer p{
         practical foam and fabric options.
       </p>
 
-      <a href="#gallery"
-         data-filter="wooden-sofa-cushions">
+      <a
+        href="#gallery"
+        data-filter="wooden-sofa-cushions">
         View work →
       </a>
 
@@ -1699,15 +1707,15 @@ footer p{
 </section>
 
 
-<!-- ======================================================
-     FEATURES
-     ====================================================== -->
+<!-- FEATURES -->
 
 <div class="feature-strip">
 
   <div class="feature">
 
-    <div class="feature-icon">↔</div>
+    <div class="feature-icon">
+      ↔
+    </div>
 
     <strong>
       Made to Measure
@@ -1722,7 +1730,9 @@ footer p{
 
   <div class="feature">
 
-    <div class="feature-icon">✓</div>
+    <div class="feature-icon">
+      ✓
+    </div>
 
     <strong>
       Premium Quality
@@ -1737,7 +1747,9 @@ footer p{
 
   <div class="feature">
 
-    <div class="feature-icon">🇮🇳</div>
+    <div class="feature-icon">
+      🇮🇳
+    </div>
 
     <strong>
       Proudly Made in India
@@ -1752,11 +1764,11 @@ footer p{
 </div>
 
 
-<!-- ======================================================
-     GALLERY
-     ====================================================== -->
+<!-- GALLERY -->
 
-<section class="section gallery-section" id="gallery">
+<section
+  class="section gallery-section"
+  id="gallery">
 
   <div class="gallery-header">
 
@@ -1776,19 +1788,30 @@ footer p{
   </div>
 
 
-  <div class="filter-row" id="filterRow">
+  <div
+    class="filter-row"
+    id="filterRow">
 
-    <button class="filter-btn active"
-            data-gallery-filter="all">
+    <button
+      class="filter-btn active"
+      data-gallery-filter="all">
       All
     </button>
 
   </div>
 
 
-  <div class="gallery-grid" id="galleryGrid">
+  <div
+    class="gallery-grid"
+    id="galleryGrid">
 
-    <div style="padding:30px;color:#777;">
+    <div
+      style="
+        grid-column:1/-1;
+        padding:30px;
+        color:#777;
+        text-align:center;
+      ">
       Loading our work photos...
     </div>
 
@@ -1797,15 +1820,17 @@ footer p{
 </section>
 
 
-<!-- ======================================================
-     WHY US
-     ====================================================== -->
+<!-- WHY US -->
 
-<section class="section why" id="why-us">
+<section
+  class="section why"
+  id="why-us">
 
   <div class="section-title">
 
-    <span>Customer focused</span>
+    <span>
+      Customer focused
+    </span>
 
     <h2>
       WHY CHOOSE US
@@ -1877,15 +1902,17 @@ footer p{
 </section>
 
 
-<!-- ======================================================
-     FAQ
-     ====================================================== -->
+<!-- FAQ -->
 
-<section class="section faq" id="faq">
+<section
+  class="section faq"
+  id="faq">
 
   <div class="section-title">
 
-    <span>Answers</span>
+    <span>
+      Answers
+    </span>
 
     <h2>
       FREQUENTLY ASKED QUESTIONS
@@ -1949,15 +1976,14 @@ footer p{
 
   </details>
 
-
 </section>
 
 
-<!-- ======================================================
-     CONTACT
-     ====================================================== -->
+<!-- CONTACT -->
 
-<section class="section contact" id="contact">
+<section
+  class="section contact"
+  id="contact">
 
   <div class="contact-box">
 
@@ -2003,9 +2029,7 @@ footer p{
 </main>
 
 
-<!-- ======================================================
-     FOOTER
-     ====================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -2037,11 +2061,11 @@ footer p{
 </footer>
 
 
-<!-- ======================================================
-     IMAGE VIEWER
-     ====================================================== -->
+<!-- IMAGE VIEWER -->
 
-<div class="viewer" id="viewer">
+<div
+  class="viewer"
+  id="viewer">
 
   <button
     class="viewer-close"
@@ -2092,9 +2116,7 @@ footer p{
 </div>
 
 
-<!-- ======================================================
-     MOBILE BOTTOM NAV
-     ====================================================== -->
+<!-- MOBILE BOTTOM NAV -->
 
 <nav class="mobile-bottom">
 
@@ -2125,18 +2147,6 @@ footer p{
 
 /* =========================================================
    IMAGE PATH FIX
-   =========================================================
-
-   photo-data.json contains paths such as:
-
-   assets/services/customised-wooden-sofa/001-sofa11.jpg
-
-   But the actual images are in the GitHub root.
-
-   This converts the JSON path into:
-
-   001-sofa11.jpg
-
    ========================================================= */
 
 function fixImagePath(path){
@@ -2147,7 +2157,15 @@ function fixImagePath(path){
 
   path = String(path).trim();
 
-  /* FIXED REGEX */
+  /*
+    Converts:
+    assets/services/service-name/photo.jpg
+
+    into:
+    photo.jpg
+
+    because your actual photos are in the repository root.
+  */
 
   path = path.replace(
     /^assets\/services\/[^/]+\//i,
@@ -2164,7 +2182,7 @@ function fixImagePath(path){
 
 
 /* =========================================================
-   GLOBAL DATA
+   PHOTO DATA
    ========================================================= */
 
 let PHOTO_DATA = [];
@@ -2173,7 +2191,7 @@ let currentFilter = "all";
 
 
 /* =========================================================
-   CATEGORY FALLBACK DATA
+   SERVICE LIST
    ========================================================= */
 
 const CATEGORY_DATA = [
@@ -2229,40 +2247,95 @@ const CATEGORY_DATA = [
 
 async function loadPhotoData(){
 
+  const gallery =
+    document.getElementById(
+      "galleryGrid"
+    );
+
   try{
 
     const response =
-      await fetch("photo-data.json?cache=" + Date.now());
+      await fetch(
+        "photo-data.json?cache=" +
+        Date.now()
+      );
 
     if(!response.ok){
-      throw new Error("photo-data.json could not be loaded");
+
+      throw new Error(
+        "photo-data.json could not be loaded"
+      );
+
     }
 
-    const data = await response.json();
+    const data =
+      await response.json();
 
-    if(Array.isArray(data)){
 
-      PHOTO_DATA = data.map(photo => {
+    if(!Array.isArray(data)){
+
+      throw new Error(
+        "photo-data.json is not an array"
+      );
+
+    }
+
+
+    PHOTO_DATA =
+      data.map(photo => {
 
         return {
 
           ...photo,
 
-          file:fixImagePath(photo.file)
+          file:
+            fixImagePath(
+              photo.file
+            )
 
         };
 
       });
 
-    }
+
+    console.log(
+      "Wooden Sofa Cushion photos loaded:",
+      PHOTO_DATA.length
+    );
+
 
   }catch(error){
 
-    console.error("Photo data error:", error);
+    console.error(
+      "Photo data error:",
+      error
+    );
 
     PHOTO_DATA = [];
 
+
+    if(gallery){
+
+      gallery.innerHTML = `
+
+        <div style="
+          grid-column:1/-1;
+          padding:50px;
+          text-align:center;
+          color:#777;
+        ">
+
+          Unable to load work photos.
+          Please refresh the page.
+
+        </div>
+
+      `;
+
+    }
+
   }
+
 
   buildFilters();
 
@@ -2272,25 +2345,43 @@ async function loadPhotoData(){
 
 
 /* =========================================================
-   BUILD FILTERS
+   BUILD FILTER BUTTONS
    ========================================================= */
 
 function buildFilters(){
 
   const filterRow =
-    document.getElementById("filterRow");
+    document.getElementById(
+      "filterRow"
+    );
 
   if(!filterRow){
     return;
   }
 
+
   filterRow.innerHTML = "";
 
+
+  /* ALL */
+
   const allButton =
-    document.createElement("button");
+    document.createElement(
+      "button"
+    );
 
   allButton.className =
-    "filter-btn active";
+    "filter-btn";
+
+
+  if(currentFilter === "all"){
+
+    allButton.classList.add(
+      "active"
+    );
+
+  }
+
 
   allButton.dataset.galleryFilter =
     "all";
@@ -2298,74 +2389,219 @@ function buildFilters(){
   allButton.textContent =
     "All";
 
-  filterRow.appendChild(allButton);
+
+  filterRow.appendChild(
+    allButton
+  );
 
 
-  const categories = [];
+  /* SERVICES */
+
+  CATEGORY_DATA.forEach(
+    service => {
+
+      const button =
+        document.createElement(
+          "button"
+        );
+
+      button.className =
+        "filter-btn";
+
+      button.dataset.galleryFilter =
+        service.id;
+
+      button.textContent =
+        service.name;
 
 
-  PHOTO_DATA.forEach(photo => {
+      if(
+        currentFilter === service.id
+      ){
+
+        button.classList.add(
+          "active"
+        );
+
+      }
+
+
+      filterRow.appendChild(
+        button
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   NORMALIZE CATEGORY
+   ========================================================= */
+
+function normalizeCategory(value){
+
+  if(!value){
+    return "";
+  }
+
+  return String(value)
+    .trim()
+    .toLowerCase()
+    .replace(/_/g,"-")
+    .replace(/\s+/g,"-");
+
+}
+
+
+/* =========================================================
+   CHECK PHOTO CATEGORY
+   ========================================================= */
+
+function photoBelongsToService(
+  photo,
+  serviceId
+){
+
+  if(!photo){
+    return false;
+  }
+
+
+  const wanted =
+    normalizeCategory(
+      serviceId
+    );
+
+
+  const category =
+    normalizeCategory(
+      photo.category
+    );
+
+
+  const categoryName =
+    normalizeCategory(
+      photo.categoryName
+    );
+
+
+  /*
+    Primary match:
+    photo.category
+  */
+
+  if(
+    category === wanted
+  ){
+
+    return true;
+
+  }
+
+
+  /*
+    Secondary match:
+    categoryName
+  */
+
+  if(
+    categoryName === wanted
+  ){
+
+    return true;
+
+  }
+
+
+  /*
+    Some JSON records may use
+    the service name instead of
+    the service ID.
+  */
+
+  const service =
+    CATEGORY_DATA.find(
+      item =>
+        item.id === serviceId
+    );
+
+
+  if(service){
+
+    const wantedName =
+      normalizeCategory(
+        service.name
+      );
+
 
     if(
-      photo.category &&
-      !categories.some(
-        item => item.id === photo.category
-      )
+      category === wantedName ||
+      categoryName === wantedName
     ){
 
-      categories.push({
+      return true;
 
-        id:photo.category,
+    }
 
-        name:
-          photo.categoryName ||
-          photo.category
+  }
 
+
+  return false;
+
+}
+
+
+/* =========================================================
+   SET SERVICE FILTER
+   ========================================================= */
+
+function setServiceFilter(
+  serviceId,
+  scrollToGallery = true
+){
+
+  currentFilter =
+    serviceId || "all";
+
+
+  document
+    .querySelectorAll(
+      ".filter-btn"
+    )
+    .forEach(button => {
+
+      button.classList.toggle(
+        "active",
+        button.dataset.galleryFilter ===
+        currentFilter
+      );
+
+    });
+
+
+  renderGallery();
+
+
+  if(scrollToGallery){
+
+    const gallery =
+      document.getElementById(
+        "gallery"
+      );
+
+
+    if(gallery){
+
+      gallery.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
       });
 
     }
 
-  });
-
-
-  CATEGORY_DATA.forEach(category => {
-
-    if(
-      !categories.some(
-        item => item.id === category.id
-      )
-    ){
-
-      categories.push({
-
-        id:category.id,
-
-        name:category.name
-
-      });
-
-    }
-
-  });
-
-
-  categories.forEach(category => {
-
-    const button =
-      document.createElement("button");
-
-    button.className =
-      "filter-btn";
-
-    button.dataset.galleryFilter =
-      category.id;
-
-    button.textContent =
-      category.name;
-
-    filterRow.appendChild(button);
-
-  });
+  }
 
 }
 
@@ -2377,7 +2613,9 @@ function buildFilters(){
 function renderGallery(){
 
   const gallery =
-    document.getElementById("galleryGrid");
+    document.getElementById(
+      "galleryGrid"
+    );
 
   if(!gallery){
     return;
@@ -2388,49 +2626,70 @@ function renderGallery(){
     PHOTO_DATA.slice();
 
 
+  /* SERVICE */
+
   if(currentFilter !== "all"){
 
     photos =
       photos.filter(
         photo =>
-          photo.category === currentFilter
+          photoBelongsToService(
+            photo,
+            currentFilter
+          )
       );
 
   }
 
 
+  /* SEARCH */
+
   const searchInput =
-    document.getElementById("searchInput");
+    document.getElementById(
+      "searchInput"
+    );
+
 
   const search =
-    searchInput ?
-      searchInput.value.trim().toLowerCase() :
-      "";
+    searchInput
+      ? searchInput.value
+          .trim()
+          .toLowerCase()
+      : "";
 
 
   if(search){
 
     photos =
-      photos.filter(photo => {
+      photos.filter(
+        photo => {
 
-        const text = [
+          const text = [
 
-          photo.name,
+            photo.name,
 
-          photo.description,
+            photo.description,
 
-          photo.keywords,
+            photo.keywords,
 
-          photo.categoryName
+            photo.categoryName,
 
-        ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
+            photo.category,
 
-        return text.includes(search);
+            photo.file
 
-      });
+          ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+
+
+          return text.includes(
+            search
+          );
+
+        }
+      );
 
   }
 
@@ -2438,18 +2697,48 @@ function renderGallery(){
   gallery.innerHTML = "";
 
 
+  /* NO RESULTS */
+
   if(!photos.length){
+
+    const service =
+      CATEGORY_DATA.find(
+        item =>
+          item.id === currentFilter
+      );
+
 
     gallery.innerHTML = `
 
       <div style="
         grid-column:1/-1;
-        padding:50px;
+        padding:60px 20px;
         text-align:center;
         color:#777;
       ">
 
-        No matching work photos found.
+        <div style="
+          font-size:42px;
+          margin-bottom:12px;
+        ">
+          📷
+        </div>
+
+        <h3 style="
+          color:#333;
+          margin-bottom:8px;
+        ">
+          No photos found
+        </h3>
+
+        <p>
+          ${
+            service
+              ? service.name
+              : "This service"
+          }
+          photos are currently unavailable.
+        </p>
 
       </div>
 
@@ -2460,123 +2749,175 @@ function renderGallery(){
   }
 
 
-  photos.forEach((photo,index) => {
+  /* PHOTO CARDS */
 
-    const card =
-      document.createElement("article");
+  photos.forEach(
+    (photo,index) => {
 
-    card.className =
-      "photo-card";
+      const card =
+        document.createElement(
+          "article"
+        );
 
-
-    const image =
-      document.createElement("img");
-
-    image.loading =
-      index < 8 ? "eager" : "lazy";
-
-    image.src =
-      fixImagePath(photo.file);
-
-    image.alt =
-      photo.name ||
-      photo.categoryName ||
-      "Wooden Sofa Cushion Chennai";
+      card.className =
+        "photo-card";
 
 
-    image.onerror =
-      function(){
-
-        this.parentElement.parentElement.style.display =
-          "none";
-
-      };
+      const image =
+        document.createElement(
+          "img"
+        );
 
 
-    const info =
-      document.createElement("div");
-
-    info.className =
-      "photo-info";
-
-
-    const small =
-      document.createElement("small");
-
-    small.textContent =
-      photo.categoryName ||
-      "Wooden Sofa Cushion";
+      image.loading =
+        index < 8
+          ? "eager"
+          : "lazy";
 
 
-    const title =
-      document.createElement("strong");
-
-    title.textContent =
-      photo.name ||
-      "Project Photo";
+      image.src =
+        fixImagePath(
+          photo.file
+        );
 
 
-    const description =
-      document.createElement("p");
-
-    description.textContent =
-      photo.description ||
-      "Wooden Sofa Cushion project photo in Chennai.";
+      image.alt =
+        photo.name ||
+        photo.categoryName ||
+        "Wooden Sofa Cushion Chennai";
 
 
-    info.appendChild(small);
+      image.onerror =
+        function(){
 
-    info.appendChild(title);
+          console.error(
+            "Image not found:",
+            this.src
+          );
 
-    info.appendChild(description);
-
-
-    card.appendChild(image);
-
-    card.appendChild(info);
-
-
-    card.addEventListener(
-      "click",
-      function(){
-
-        openViewer(photo);
-
-      }
-    );
+        };
 
 
-    gallery.appendChild(card);
+      const info =
+        document.createElement(
+          "div"
+        );
 
-  });
+      info.className =
+        "photo-info";
+
+
+      const category =
+        document.createElement(
+          "small"
+        );
+
+      category.textContent =
+        photo.categoryName ||
+        "Wooden Sofa Cushion";
+
+
+      const title =
+        document.createElement(
+          "strong"
+        );
+
+      title.textContent =
+        photo.name ||
+        "Project Photo";
+
+
+      const description =
+        document.createElement(
+          "p"
+        );
+
+      description.textContent =
+        photo.description ||
+        "Wooden Sofa Cushion project photo in Chennai.";
+
+
+      info.appendChild(
+        category
+      );
+
+      info.appendChild(
+        title
+      );
+
+      info.appendChild(
+        description
+      );
+
+
+      card.appendChild(
+        image
+      );
+
+      card.appendChild(
+        info
+      );
+
+
+      card.addEventListener(
+        "click",
+        function(){
+
+          openViewer(
+            photo
+          );
+
+        }
+      );
+
+
+      gallery.appendChild(
+        card
+      );
+
+    }
+  );
 
 }
 
 
 /* =========================================================
-   OPEN PHOTO VIEWER
+   PHOTO VIEWER
    ========================================================= */
 
 function openViewer(photo){
 
   const viewer =
-    document.getElementById("viewer");
+    document.getElementById(
+      "viewer"
+    );
 
   const image =
-    document.getElementById("viewerImage");
+    document.getElementById(
+      "viewerImage"
+    );
 
   const category =
-    document.getElementById("viewerCategory");
+    document.getElementById(
+      "viewerCategory"
+    );
 
   const title =
-    document.getElementById("viewerTitle");
+    document.getElementById(
+      "viewerTitle"
+    );
 
   const description =
-    document.getElementById("viewerDescription");
+    document.getElementById(
+      "viewerDescription"
+    );
 
 
   image.src =
-    fixImagePath(photo.file);
+    fixImagePath(
+      photo.file
+    );
+
 
   image.alt =
     photo.name ||
@@ -2598,7 +2939,10 @@ function openViewer(photo){
     "Custom furniture work by Wooden Sofa Cushion in Chennai.";
 
 
-  viewer.classList.add("open");
+  viewer.classList.add(
+    "open"
+  );
+
 
   document.body.style.overflow =
     "hidden";
@@ -2613,9 +2957,20 @@ function openViewer(photo){
 function closeViewer(){
 
   const viewer =
-    document.getElementById("viewer");
+    document.getElementById(
+      "viewer"
+    );
 
-  viewer.classList.remove("open");
+
+  if(!viewer){
+    return;
+  }
+
+
+  viewer.classList.remove(
+    "open"
+  );
+
 
   document.body.style.overflow =
     "";
@@ -2623,17 +2978,31 @@ function closeViewer(){
 }
 
 
-document
-  .getElementById("viewerClose")
-  .addEventListener(
+const viewerClose =
+  document.getElementById(
+    "viewerClose"
+  );
+
+
+if(viewerClose){
+
+  viewerClose.addEventListener(
     "click",
     closeViewer
   );
 
+}
 
-document
-  .getElementById("viewer")
-  .addEventListener(
+
+const viewerElement =
+  document.getElementById(
+    "viewer"
+  );
+
+
+if(viewerElement){
+
+  viewerElement.addEventListener(
     "click",
     function(event){
 
@@ -2648,12 +3017,16 @@ document
     }
   );
 
+}
+
 
 document.addEventListener(
   "keydown",
   function(event){
 
-    if(event.key === "Escape"){
+    if(
+      event.key === "Escape"
+    ){
 
       closeViewer();
 
@@ -2667,9 +3040,15 @@ document.addEventListener(
    FILTER BUTTONS
    ========================================================= */
 
-document
-  .getElementById("filterRow")
-  .addEventListener(
+const filterRow =
+  document.getElementById(
+    "filterRow"
+  );
+
+
+if(filterRow){
+
+  filterRow.addEventListener(
     "click",
     function(event){
 
@@ -2678,140 +3057,79 @@ document
           ".filter-btn"
         );
 
+
       if(!button){
         return;
       }
 
 
-      currentFilter =
+      setServiceFilter(
         button.dataset.galleryFilter ||
-        "all";
-
-
-      document
-        .querySelectorAll(".filter-btn")
-        .forEach(btn => {
-
-          btn.classList.remove(
-            "active"
-          );
-
-        });
-
-
-      button.classList.add(
-        "active"
+        "all",
+        true
       );
 
+    }
+  );
 
-      renderGallery();
+}
 
 
-      document
-        .getElementById("gallery")
-        .scrollIntoView({
-          behavior:"smooth",
-          block:"start"
-        });
+/* =========================================================
+   CATEGORY CIRCLES
+   ========================================================= */
+
+document
+  .querySelectorAll(
+    ".category[data-filter]"
+  )
+  .forEach(
+    category => {
+
+      category.addEventListener(
+        "click",
+        function(){
+
+          setServiceFilter(
+            this.dataset.filter,
+            true
+          );
+
+        }
+      );
 
     }
   );
 
 
 /* =========================================================
-   CATEGORY CLICKS
-   ========================================================= */
-
-document
-  .querySelectorAll(".category")
-  .forEach(category => {
-
-    category.addEventListener(
-      "click",
-      function(){
-
-        currentFilter =
-          this.dataset.filter ||
-          "all";
-
-
-        document
-          .querySelectorAll(".filter-btn")
-          .forEach(button => {
-
-            button.classList.toggle(
-              "active",
-              button.dataset.galleryFilter ===
-              currentFilter
-            );
-
-          });
-
-
-        renderGallery();
-
-
-        document
-          .getElementById("gallery")
-          .scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-          });
-
-      }
-    );
-
-  });
-
-
-/* =========================================================
-   SERVICE LINKS
+   ELITE OFFERING LINKS
    ========================================================= */
 
 document
   .querySelectorAll(
-    "[data-filter]"
+    ".offering a[data-filter]"
   )
-  .forEach(link => {
+  .forEach(
+    link => {
 
-    link.addEventListener(
-      "click",
-      function(event){
+      link.addEventListener(
+        "click",
+        function(event){
 
-        event.preventDefault();
-
-        currentFilter =
-          this.dataset.filter ||
-          "all";
+          event.preventDefault();
 
 
-        document
-          .querySelectorAll(".filter-btn")
-          .forEach(button => {
+          setServiceFilter(
+            this.dataset.filter,
+            true
+          );
 
-            button.classList.toggle(
-              "active",
-              button.dataset.galleryFilter ===
-              currentFilter
-            );
+        }
+      );
 
-          });
-
-
-        renderGallery();
-
-
-        document
-          .getElementById("gallery")
-          .scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-          });
-
-      }
-    );
-
-  });
+    }
+  );
 
 
 /* =========================================================
@@ -2824,33 +3142,54 @@ const searchInput =
   );
 
 
-searchInput.addEventListener(
-  "input",
-  function(){
+if(searchInput){
 
-    renderGallery();
+  searchInput.addEventListener(
+    "input",
+    function(){
 
-  }
-);
+      renderGallery();
+
+    }
+  );
+
+}
 
 
-document
-  .getElementById("searchButton")
-  .addEventListener(
+const searchButton =
+  document.getElementById(
+    "searchButton"
+  );
+
+
+if(searchButton){
+
+  searchButton.addEventListener(
     "click",
     function(){
 
       renderGallery();
 
-      document
-        .getElementById("gallery")
-        .scrollIntoView({
+
+      const gallery =
+        document.getElementById(
+          "gallery"
+        );
+
+
+      if(gallery){
+
+        gallery.scrollIntoView({
           behavior:"smooth",
           block:"start"
         });
 
+      }
+
     }
   );
+
+}
 
 
 /* =========================================================
@@ -2860,6 +3199,26 @@ document
 loadPhotoData();
 
 </script>
+
+
+<!-- =======================================================
+     TAWK.TO LIVE CHAT
+     ======================================================= -->
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a8338b4cf169a34428ce573/1k089b166';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 
 </body>
 </html>
