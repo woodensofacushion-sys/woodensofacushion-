@@ -86,10 +86,6 @@ input{
   font:inherit;
 }
 
-/* =========================================================
-   COLORS
-   ========================================================= */
-
 :root{
   --pink:#a5004f;
   --pink-dark:#87003f;
@@ -455,6 +451,8 @@ input{
   cursor:pointer;
 }
 
+/* UPDATED: PERFECT CIRCLE IMAGE */
+
 .category-image{
   width:145px;
   height:145px;
@@ -482,10 +480,14 @@ input{
   pointer-events:none;
 }
 
+/* UPDATED IMAGE FIT */
+
 .category-image img{
-  width:88%;
-  height:88%;
-  object-fit:contain;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
   position:relative;
   z-index:2;
 }
@@ -2097,38 +2099,23 @@ footer p{
 <nav class="mobile-bottom">
 
   <a href="#home">
-
     <span>⌂</span>
-
     Home
-
   </a>
-
 
   <a href="#categories">
-
     <span>⌑</span>
-
     Categories
-
   </a>
-
 
   <a href="#gallery">
-
     <span>▣</span>
-
     Gallery
-
   </a>
 
-
   <a href="#contact">
-
     <span>☰</span>
-
     Menu
-
   </a>
 
 </nav>
@@ -2137,21 +2124,19 @@ footer p{
 <script>
 
 /* =========================================================
-   IMPORTANT IMAGE PATH FIX
+   IMAGE PATH FIX
    =========================================================
 
-   Your photo-data.json currently contains paths such as:
+   photo-data.json contains paths such as:
 
    assets/services/customised-wooden-sofa/001-sofa11.jpg
 
-   BUT your real GitHub repository has:
+   But the actual images are in the GitHub root.
+
+   This converts the JSON path into:
 
    001-sofa11.jpg
 
-   Therefore this function removes the old virtual
-   assets/services/category/ directory.
-
-   NO ASSETS FOLDER IS REQUIRED.
    ========================================================= */
 
 function fixImagePath(path){
@@ -2161,6 +2146,8 @@ function fixImagePath(path){
   }
 
   path = String(path).trim();
+
+  /* FIXED REGEX */
 
   path = path.replace(
     /^assets\/services\/[^/]+\//i,
@@ -2271,7 +2258,7 @@ async function loadPhotoData(){
 
   }catch(error){
 
-    console.error(error);
+    console.error("Photo data error:", error);
 
     PHOTO_DATA = [];
 
@@ -2315,6 +2302,7 @@ function buildFilters(){
 
 
   const categories = [];
+
 
   PHOTO_DATA.forEach(photo => {
 
@@ -2495,6 +2483,7 @@ function renderGallery(){
       photo.categoryName ||
       "Wooden Sofa Cushion Chennai";
 
+
     image.onerror =
       function(){
 
@@ -2590,7 +2579,8 @@ function openViewer(photo){
     fixImagePath(photo.file);
 
   image.alt =
-    photo.name || "Wooden Sofa Cushion project";
+    photo.name ||
+    "Wooden Sofa Cushion project";
 
 
   category.textContent =
@@ -2716,6 +2706,7 @@ document
 
       renderGallery();
 
+
       document
         .getElementById("gallery")
         .scrollIntoView({
@@ -2763,7 +2754,8 @@ document
         document
           .getElementById("gallery")
           .scrollIntoView({
-            behavior:"smooth"
+            behavior:"smooth",
+            block:"start"
           });
 
       }
@@ -2812,7 +2804,8 @@ document
         document
           .getElementById("gallery")
           .scrollIntoView({
-            behavior:"smooth"
+            behavior:"smooth",
+            block:"start"
           });
 
       }
@@ -2852,7 +2845,8 @@ document
       document
         .getElementById("gallery")
         .scrollIntoView({
-          behavior:"smooth"
+          behavior:"smooth",
+          block:"start"
         });
 
     }
