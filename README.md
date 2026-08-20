@@ -14,3 +14,4 @@ Static website built from the service photo RAR folders supplied in this chat.
 ## Deploy
 Upload the contents of this folder to the root of the GitHub Pages/Cloudflare Pages project.
 Do not upload the RAR files for the website itself; the images are already extracted into `assets/services/`.
+Latest website deployment
